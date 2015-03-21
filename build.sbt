@@ -9,5 +9,5 @@ libraryDependencies ++= Seq(
   "org.slf4j" % "slf4j-nop" % "1.6.4",
   "org.jsoup" % "jsoup" % "1.8.1",
   "com.github.tminglei" %% "slick-pg" % "0.8.2",
-  "postgresql" % "postgresql" % "9.1-901-1.jdbc4"
+  "joda-time" % "joda-time" % "2.7"
 )

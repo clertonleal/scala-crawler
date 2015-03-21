@@ -6,7 +6,7 @@ import driver.PgDriver.simple._
  * Date: 21/02/15
  * Time: 13:35
  */
-class Movie(tag: Tag) extends Table[(String, String, Int, String, String)](tag, "movies")  {
+class Movie(tag: Tag) extends Table[(String, String, Int, String, String, String)](tag, "movies")  {
 
   def id = column[Int]("id", O.PrimaryKey, O.AutoInc)
   def title = column[String]("title")
@@ -14,7 +14,8 @@ class Movie(tag: Tag) extends Table[(String, String, Int, String, String)](tag, 
   def durationInMinutes = column[Int]("durationInMinutes")
   def director = column[String]("director")
   def gender = column[String]("gender")
+  def coverUrl = column[String]("cover_url")
 
-  def * = (title, synopsis, durationInMinutes, director, gender)
+  def * = (title, synopsis, durationInMinutes, director, gender, coverUrl)
 
 }

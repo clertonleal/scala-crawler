@@ -1,6 +1,7 @@
 package driver
 
-import com.github.tminglei.slickpg.PgDateSupport
+
+import com.github.tminglei.slickpg.PgDateSupportJoda
 
 import scala.slick.driver.PostgresDriver
 
@@ -12,7 +13,7 @@ import scala.slick.driver.PostgresDriver
 
 object PgDriver extends MyPostgresDriver
 
-trait MyPostgresDriver extends PostgresDriver with PgDateSupport {
+trait MyPostgresDriver extends PostgresDriver with PgDateSupportJoda {
 
   override lazy val Implicit = new ImplicitsPlus {}
   override val simple = new SimpleQLPlus {}
